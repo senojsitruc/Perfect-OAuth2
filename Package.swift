@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -15,14 +15,13 @@ let package = Package(
             targets: ["OAuth2"]),
     ],
     dependencies: [
-        .package(url: "http://10.10.10.155:3000/senojsitruc/Perfect-Session.git", from: "3.1.3"),
+        .package(url: "http://10.10.10.155:3000/senojsitruc/Perfect-Session.git", branch: "senojsitruc"),
     ],
     targets: [
         .target(
-            name: "OAuth2",
-            dependencies: ["PerfectSession"]),
-        .testTarget(
-            name: "OAuth2Tests",
-            dependencies: ["OAuth2"]),
-    ]
+            name: "OAuth2", dependencies: [
+							.product(name: "PerfectSession", package: "Perfect-Session")
+						]
+				)
+		]
 )
