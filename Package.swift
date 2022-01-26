@@ -1,16 +1,21 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
     name: "OAuth2",
+		platforms: [
+			.iOS(.v10),
+			.macOS(.v10_10),
+			.tvOS(.v11)
+		],
     products: [
         .library(
             name: "OAuth2",
             targets: ["OAuth2"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/PerfectlySoft/Perfect-Session.git", from: "3.1.3"),
+        .package(url: "http://10.10.10.155:3000/senojsitruc/Perfect-Session.git", from: "3.1.3"),
     ],
     targets: [
         .target(
