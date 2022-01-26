@@ -15,7 +15,7 @@ let package = Package(
             targets: ["OAuth2"]),
     ],
     dependencies: [
-        .package(url: "http://10.10.10.155:3000/senojsitruc/Perfect-Session.git", from: "3.1.3"),
+        .package(url: "http://10.10.10.155:3000/senojsitruc/Perfect-Session.git", branch: "senojsitruc"),
     ],
     targets: [
         .target(
