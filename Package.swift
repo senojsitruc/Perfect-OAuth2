@@ -19,10 +19,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "OAuth2",
-            dependencies: ["PerfectSession"]),
-        .testTarget(
-            name: "OAuth2Tests",
-            dependencies: ["OAuth2"]),
-    ]
+            name: "OAuth2", dependencies: [
+							.product(name: "PerfectSession", package: "Perfect-Session")
+						]
+				)
+		]
 )
