@@ -9,7 +9,6 @@
 import PerfectLib
 import PerfectCURL
 import cURL
-import PerfectHTTP
 
 
 extension OAuth2 {
